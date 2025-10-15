@@ -1,0 +1,61 @@
+:root {
+  --md-primary-fg-color: #3776ab;
+  --md-primary-fg-color--light: #4b8bbe;
+  --md-primary-fg-color--dark: #306998;
+}
+
+/* 제목 강조 */
+.title {
+  color: var(--md-primary-fg-color);
+  font-weight: bold;
+}
+
+.caution {
+  color: #e06c75;
+  font-weight: bold;
+}
+
+/* 코드 블록 전체 */
+pre code, code {
+  background-color: #1e1e1e !important;
+  color: #d4d4d4 !important;
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.95em;
+  border-radius: 8px;
+  line-height: 1.45;
+  padding: 0.6em 0.8em;
+  display: block;
+  overflow-x: auto;
+}
+
+/* 인라인 코드 
+code:not(pre code) {
+  background-color: #2d2d2d !important;
+  color: #dcdcdc !important;
+  border-radius: 4px;
+  padding: 0.15em 0.3em;
+}*/
+
+/* ─────────────── VSCode 다크 테마 색상 ─────────────── */
+code {
+  background-color: #2d2d2d !important;
+  color: #dcdcdc;
+  font-family: 'Consolas', 'Courier New', monospace;
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 0.95em;
+}
+
+.k  { color: #C586C0; } /* 키워드 (while, for, if 등) */
+.l  { color: #4EC9B0; } /* 라이브러리 or 클래스 */
+.f { color: #DCDCAA; } /* 함수 이름 */
+.v  { color: #9CDCFE; } /* 변수명 */
+.n  { color: #B5CEA8; } /* 숫자 */
+.s  { color: #CE9178; } /* 문자열 */
+.b  { color: #288EC9; } /* 불리언 (True, False, None) */
+.c  { color: #6A9955; } /* 주석 */
+
+.pf { color: #FFB516; } /* 함수 호출 괄호 (함수와 연결되는 주황색 괄호) */
+.pg { color: #C586C0; } /* 일반 괄호 (보라색) */
+.pp { color: #288EC9; } /* 추가 괄호 (파란색) */
+

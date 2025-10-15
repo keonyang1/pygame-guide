@@ -1,0 +1,32 @@
+site_name: 파이게임 기초 가이드
+theme:
+  name: material
+  palette:
+    - scheme: slate        # 다크 모드
+      primary: custom
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: 라이트 모드로 전환
+    - scheme: default      # 라이트 모드
+      primary: custom
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: 다크 모드로 전환
+
+nav:
+  - 홈: index.md
+  - 준비 단계:
+    - 라이브러리 설치하기: 준비_단계/라이브러리_설치하기.md
+    - 기본 틀 만들기: 준비_단계/기본_틀_만들기.md
+  - 도형 그리기: 도형_그리기.md
+  - 예시 게임: 예시_게임/다른_색깔_찾기.md
+  - 참고:
+    - 기본 틀 상세 설명: 참고/기본_틀_상세_설명.md
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - assets/js/copy-code.js
