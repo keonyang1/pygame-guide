@@ -686,8 +686,8 @@
 <h2 id="rect"><span class="title">rect()</span></h2>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">rect</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">[</span><span class="n">x</span>, <span class="n">y</span>, <span class="n">폭</span>, <span class="n">높이</span><span class="pg">]</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
 
-<p>(x, y)의 좌표를 기준으로 폭×높이만큼의 <strong>직사각형(Rectangle)</strong> 을 생성합니다.
-‘두께’를 생략하면 내부가 채워집니다.</p>
+<p>(x, y)의 좌표를 기준으로 폭×높이만큼의 <strong>직사각형(Rectangle)</strong> 을 생성합니다.<br />
+‘두께’를 생략하면 내부가 채워집니다.  </p>
 <p><strong>예시</strong></p>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">rect</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"red"</span>, <span class="pg">(</span><span class="n">100</span>, <span class="n">100</span>, <span class="n">200</span>, <span class="n">150</span><span class="pg">)</span><span class="pf">)</span></code></pre>
 
@@ -695,8 +695,8 @@
 <h2 id="circle"><span class="title">circle()</span></h2>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">circle</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">(</span><span class="n">x</span>, <span class="n">y</span><span class="pg">)</span>, <span class="n">반지름</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
 
-<p>(x, y)를 중심으로 하는 <strong>원(Circle)</strong> 을 그립니다.
-‘두께’를 생략하면 꽉 찬 원이 됩니다.</p>
+<p>(x, y)를 중심으로 하는 <strong>원(Circle)</strong> 을 그립니다.<br />
+‘두께’를 생략하면 꽉 찬 원이 됩니다.  </p>
 <p><strong>예시</strong></p>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">circle</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"blue"</span>, <span class="pg">(</span><span class="n">300</span>, <span class="n">300</span><span class="pg">)</span>, <span class="n">80</span><span class="pf">)</span></code></pre>
 
@@ -704,8 +704,8 @@
 <h2 id="ellipse"><span class="title">ellipse()</span></h2>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">ellipse</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">[</span><span class="n">x</span>, <span class="n">y</span>, <span class="n">폭</span>, <span class="n">높이</span><span class="pg">]</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
 
-<p>지정된 사각형 안에 <strong>타원(Ellipse)</strong> 을 그립니다.
-폭과 높이에 따라 원형 또는 납작한 타원이 됩니다.</p>
+<p>지정된 사각형 안에 <strong>타원(Ellipse)</strong> 을 그립니다.<br />
+폭과 높이에 따라 원형 또는 납작한 타원이 됩니다.  </p>
 <p><strong>예시</strong></p>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">ellipse</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"green"</span>, <span class="pg">(</span><span class="n">150</span>, <span class="n">250</span>, <span class="n">300</span>, <span class="n">150</span><span class="pg">)</span><span class="pf">)</span></code></pre>
 
@@ -713,7 +713,7 @@
 <h2 id="line"><span class="title">line()</span></h2>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">line</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">(</span><span class="n">시작점 x</span>, <span class="n">y</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">끝점 x</span>, <span class="n">y</span><span class="pg">)</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
 
-<p>두 점을 연결하는 <strong>선(Line)</strong> 을 그립니다.</p>
+<p>두 점을 연결하는 <strong>선(Line)</strong> 을 그립니다.  </p>
 <p><strong>예시</strong></p>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">line</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"white"</span>, <span class="pg">(</span><span class="n">50</span>, <span class="n">50</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">300</span>, <span class="n">200</span><span class="pg">)</span>, <span class="n">5</span><span class="pf">)</span></code></pre>
 
@@ -721,8 +721,8 @@
 <h2 id="lines"><span class="title">lines()</span></h2>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">lines</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="b">닫힘여부</span>, <span class="pg">[</span><span class="pg">(</span><span class="n">x1</span>, <span class="n">y1</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">x2</span>, <span class="n">y2</span><span class="pg">)</span>, ...<span class="pg">]</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
 
-<p>연속된 점들을 연결하여 <strong>다각형의 윤곽선</strong>을 그립니다.
-'닫힘여부'에 <span class="b">True</span>를 주면 마지막 점과 첫 점이 자동으로 연결됩니다.</p>
+<p>연속된 점들을 연결하여 <strong>다각형의 윤곽선</strong>을 그립니다.<br />
+'닫힘여부'에 <span class="b">True</span>를 주면 마지막 점과 첫 점이 자동으로 연결됩니다.  </p>
 <p><strong>예시</strong></p>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">lines</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"yellow"</span>, <span class="b">True</span>, <span class="pg">[</span><span class="pg">(</span><span class="n">100</span>, <span class="n">400</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">200</span>, <span class="n">500</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">300</span>, <span class="n">450</span><span class="pg">)</span><span class="pg">]</span>, <span class="n">3</span><span class="pf">)</span></code></pre>
 
@@ -730,8 +730,8 @@
 <h2 id="aaline"><span class="title">aaline()</span></h2>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">aaline</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">(</span><span class="n">시작점 x</span>, <span class="n">y</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">끝점 x</span>, <span class="n">y</span><span class="pg">)</span><span class="pf">)</span></code></pre>
 
-<p><strong>부드러운(안티에일리어싱)</strong> 선을 그립니다.
-픽셀 계단 현상이 줄어들어 매끄럽게 보입니다.</p>
+<p><strong>부드러운(안티에일리어싱)</strong> 선을 그립니다.<br />
+픽셀 계단 현상이 줄어들어 매끄럽게 보입니다.  </p>
 <p><strong>예시</strong></p>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">aaline</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"white"</span>, <span class="pg">(</span><span class="n">100</span>, <span class="n">100</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">400</span>, <span class="n">200</span><span class="pg">)</span><span class="pf">)</span></code></pre>
 
@@ -739,8 +739,8 @@
 <h2 id="polygon"><span class="title">polygon()</span></h2>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">polygon</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">[</span><span class="pg">(</span><span class="n">x1</span>, <span class="n">y1</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">x2</span>, <span class="n">y2</span><span class="pg">)</span>, ...<span class="pg">]</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
 
-<p>여러 점을 연결하여 <strong>다각형(Polygon)</strong> 을 만듭니다.
-‘두께’를 생략하면 내부가 채워집니다.</p>
+<p>여러 점을 연결하여 <strong>다각형(Polygon)</strong> 을 만듭니다.<br />
+‘두께’를 생략하면 내부가 채워집니다.  </p>
 <p><strong>예시</strong></p>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">polygon</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"orange"</span>, <span class="pg">[</span><span class="pg">(</span><span class="n">200</span>, <span class="n">200</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">250</span>, <span class="n">150</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">300</span>, <span class="n">200</span><span class="pg">)</span><span class="pg">]</span><span class="pf">)</span></code></pre>
 
@@ -748,8 +748,8 @@
 <h2 id="arc"><span class="title">arc()</span></h2>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">arc</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">[</span><span class="n">x</span>, <span class="n">y</span>, <span class="n">폭</span>, <span class="n">높이</span><span class="pg">]</span>, <span class="n">시작각도</span>, <span class="n">끝각도</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
 
-<p>지정된 사각형 영역 안에 <strong>호(Arc, 원의 일부분)</strong> 를 그립니다.
-각도는 라디안 단위이며, 시계방향으로 증가합니다.</p>
+<p>지정된 사각형 영역 안에 <strong>호(Arc, 원의 일부분)</strong> 를 그립니다.<br />
+각도는 라디안 단위이며, 시계방향으로 증가합니다.  </p>
 <p><strong>예시</strong></p>
 <pre><code><span class="k">import</span> <span class="l">math</span>
 <span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">arc</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"purple"</span>, <span class="pg">(</span><span class="n">150</span>, <span class="n">100</span>, <span class="n">200</span>, <span class="n">200</span><span class="pg">)</span>, <span class="l">math</span>.<span class="v">pi</span> <span class="k">/</span> <span class="n">2</span>, <span class="l">math</span>.<span class="v">pi</span>, <span class="n">4</span><span class="pf">)</span></code></pre>
