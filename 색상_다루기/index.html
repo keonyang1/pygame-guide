@@ -736,7 +736,7 @@
 </blockquote>
 <hr />
 <h2 id="rgb"><span class="title">RGB 색상 지정</span></h2>
-<pre><code><span class="v">color</span> <span class="k">=</span> <span class="pg">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span><span class="pg">)</span>  <span class="c"># 빨강 (Red)</span></code></pre>
+<pre><code><span class="v">color</span> = <span class="pg">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span><span class="pg">)</span>  <span class="c"># 빨강 (Red)</span></code></pre>
 
 <p>RGB는 <strong>Red, Green, Blue</strong>의 세 가지 값을 조합하여 색을 표현합니다.<br />
 각 값은 <strong>0~255</strong> 사이의 정수입니다.  </p>
@@ -759,10 +759,10 @@
 </blockquote>
 <hr />
 <h2 id="_3"><span class="title">색상 상수로 정의하기</span></h2>
-<pre><code><span class="vb">WHITE</span> <span class="k">=</span> <span class="pf">(</span><span class="n">255</span>, <span class="n">255</span>, <span class="n">255</span><span class="pf">)</span>
-<span class="vb">BLACK</span> <span class="k">=</span> <span class="pf">(</span><span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span><span class="pf">)</span>
-<span class="vb">RED</span> <span class="k">=</span> <span class="pf">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span><span class="pf">)</span>
-<span class="vb">BLUE</span> <span class="k">=</span> <span class="pf">(</span><span class="n">0</span>, <span class="n">0</span>, <span class="n">255</span><span class="pf">)</span></code></pre>
+<pre><code><span class="vb">WHITE</span> = <span class="pf">(</span><span class="n">255</span>, <span class="n">255</span>, <span class="n">255</span><span class="pf">)</span>
+<span class="vb">BLACK</span> = <span class="pf">(</span><span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span><span class="pf">)</span>
+<span class="vb">RED</span> = <span class="pf">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span><span class="pf">)</span>
+<span class="vb">BLUE</span> = <span class="pf">(</span><span class="n">0</span>, <span class="n">0</span>, <span class="n">255</span><span class="pf">)</span></code></pre>
 
 <p>이처럼 미리 정의해두면 나중에 코드에서 보기 쉽고, 유지보수가 편해집니다.  </p>
 <p>예시:</p>
@@ -770,7 +770,7 @@
 
 <hr />
 <h2 id="alpha"><span class="title">투명도(Alpha) 값 사용</span></h2>
-<pre><code><span class="v">color_with_alpha</span> <span class="k">=</span> <span class="pf">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">128</span><span class="pf">)</span> <span class="c"># 빨강 + 반투명</span></code></pre>
+<pre><code><span class="v">color_with_alpha</span> = <span class="pf">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">128</span><span class="pf">)</span> <span class="c"># 빨강 + 반투명</span></code></pre>
 
 <p>RGBA에서 마지막 값인 <strong>Alpha(0~255)</strong> 는 투명도를 의미합니다.<br />
 '0'은 완전 투명, '255'는 완전 불투명입니다.  </p>
@@ -783,7 +783,7 @@
 <hr />
 <h3 id="1-surface-set_alpha">올바른 방법 1 — <strong>전체 Surface 투명도</strong>: 'set_alpha()' 사용</h3>
 <p>Surface 전체의 투명도를 한 번에 조절하고 싶을 때 사용합니다. 간단하고 빠르지만, Surface 내의 픽셀별 알파는 불가능합니다.</p>
-<pre><code><span class="v">s</span> <span class="k">=</span> <span class="l">pygame</span>.<span class="l">Surface</span><span class="pf">(</span><span class="pg">(</span><span class="n">200</span>, <span class="n">150</span><span class="pg">)</span><span class="pf">)</span>
+<pre><code><span class="v">s</span> = <span class="l">pygame</span>.<span class="l">Surface</span><span class="pf">(</span><span class="pg">(</span><span class="n">200</span>, <span class="n">150</span><span class="pg">)</span><span class="pf">)</span>
 <span class="v">s</span>.<span class="f">set_alpha</span><span class="pf">(</span><span class="n">100</span><span class="pf">)</span> <span class="c"># 전체 투명도 설정 (0~255)</span>
 <span class="v">s</span>.<span class="f">fill</span><span class="pf">(</span><span class="pg">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span><span class="pg">)</span><span class="pf">)</span> <span class="c"># 내부를 빨강으로 채움</span>
 <span class="v">screen</span>.<span class="f">blit</span><span class="pf">(</span><span class="v">s</span>, <span class="pg">(</span><span class="n">100</span>, <span class="n">100</span><span class="pg">)</span><span class="pf">)</span></code></pre>
@@ -797,12 +797,12 @@
 <hr />
 <h3 id="2-rgba-srcalpha-rgba">올바른 방법 2 — <strong>픽셀별 투명도(RGBA)</strong>: SRCALPHA + RGBA 사용</h3>
 <p>픽셀마다 다른 투명도를 적용하려면 'pygame.SRCALPHA' 옵션으로 Surface를 만들고, RGBA 값으로 채웁니다.  </p>
-<pre><code><span class="v">s</span> <span class="k">=</span> <span class="l">pygame</span>.<span class="l">Surface</span><span class="pf">((</span><span class="n">200</span>, <span class="n">150</span><span class="pf">)</span>, <span class="l">pygame</span>.<span class="v">SRCALPHA</span><span class="pf">)</span>
+<pre><code><span class="v">s</span> = <span class="l">pygame</span>.<span class="l">Surface</span><span class="pf">((</span><span class="n">200</span>, <span class="n">150</span><span class="pf">)</span>, <span class="l">pygame</span>.<span class="v">SRCALPHA</span><span class="pf">)</span>
 <span class="v">s</span>.<span class="f">fill</span><span class="pf">(</span><span class="pg">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">128</span><span class="pg">)</span><span class="pf">)</span> <span class="c"># 빨강 + 반투명(128)</span>
 <span class="v">screen</span>.<span class="f">blit</span><span class="pf">(</span><span class="v">s</span>, <span class="pg">(</span><span class="n">100</span>, <span class="n">100</span><span class="pg">)</span><span class="pf">)</span></code></pre>
 
 <p>또는 'pygame.draw'로 도형을 그리고 싶다면 대상이 되는 <strong>SRCALPHA Surface 위에</strong> 그리고 blit 합니다.  </p>
-<pre><code><span class="v">s</span> <span class="k">=</span> <span class="l">pygame</span>.<span class="l">Surface</span><span class="pf">((</span><span class="n">200</span>, <span class="n">150</span><span class="pf">)</span>, <span class="l">pygame</span>.<span class="v">SRCALPHA</span><span class="pf">)</span>
+<pre><code><span class="v">s</span> = <span class="l">pygame</span>.<span class="l">Surface</span><span class="pf">((</span><span class="n">200</span>, <span class="n">150</span><span class="pf">)</span>, <span class="l">pygame</span>.<span class="v">SRCALPHA</span><span class="pf">)</span>
 <span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">rect</span><span class="pf">(</span><span class="v">s</span>, <span class="pg">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">150</span><span class="pg">),</span> <span class="pg">(</span><span class="n">0</span>, <span class="n">0</span>, <span class="n">200</span>, <span class="n">150</span><span class="pg">)</span><span class="pf">)</span>
 <span class="v">screen</span>.<span class="f">blit</span><span class="pf">(</span><span class="v">s</span>, <span class="pg">(</span><span class="n">100</span>, <span class="n">100</span><span class="pg">)</span><span class="pf">)</span></code></pre>
 
