@@ -15,8 +15,8 @@
   font-weight: bold;
 }
 
-/* 코드 블록 전체 */
-pre code, code {
+/* ─────────────── VSCode 다크 테마 색상 ─────────────── */
+pre code {
   background-color: #1e1e1e !important;
   color: #d4d4d4 !important;
   font-family: "Consolas", "Courier New", monospace;
@@ -28,15 +28,6 @@ pre code, code {
   overflow-x: auto;
 }
 
-/* 인라인 코드 
-code:not(pre code) {
-  background-color: #2d2d2d !important;
-  color: #dcdcdc !important;
-  border-radius: 4px;
-  padding: 0.15em 0.3em;
-}*/
-
-/* ─────────────── VSCode 다크 테마 색상 ─────────────── */
 code {
   background-color: #2d2d2d !important;
   color: #dcdcdc;
