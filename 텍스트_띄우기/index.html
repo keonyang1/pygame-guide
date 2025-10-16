@@ -727,22 +727,22 @@
 </table>
 <hr />
 <h2 id="_3"><span class="title">예시</span></h2>
-<pre><code><span class="v">text</span> <span class="k">=</span> <span class="f">font</span><span class="pf">(</span><span class="n">50</span><span class="pf">)</span>.<span class="f">render</span><span class="pf">(</span><span class="s">"Hello, pygame!"</span>, <span class="b">True</span>, <span class="s">"blue"</span><span class="pf">)</span>
+<pre><code><span class="v">text</span> = <span class="f">font</span><span class="pf">(</span><span class="n">50</span><span class="pf">)</span>.<span class="f">render</span><span class="pf">(</span><span class="s">"Hello, pygame!"</span>, <span class="b">True</span>, <span class="s">"blue"</span><span class="pf">)</span>
 <span class="v">screen</span>.<span class="f">blit</span><span class="pf">(</span><span class="v">text</span>, <span class="pg">(</span><span class="n">100</span>, <span class="n">100</span><span class="pg">)</span><span class="pf">)</span></code></pre>
 
 <hr />
 <h2 id="_4"><span class="title">폰트 파일 직접 불러오기</span></h2>
-<pre><code><span class="v">custom_font</span> <span class="k">=</span> <span class="l">pygame</span>.<span class="l">font</span>.<span class="f">Font</span><span class="pf">(</span><span class="s">"fonts/myfont.ttf"</span>, <span class="n">40</span><span class="pf">)</span></code></pre>
+<pre><code><span class="v">custom_font</span> = <span class="l">pygame</span>.<span class="l">font</span>.<span class="l">Font</span><span class="pf">(</span><span class="s">"assets/font/NanumGothic.otf"</span>, <span class="n">40</span><span class="pf">)</span></code></pre>
 
 <blockquote>
-<p>💡 <code>Font()</code>는 외부 <code>.ttf</code> 파일을 직접 불러옵니다.<br />
+<p><code>Font()</code>는 외부 <code>.ttf</code> 또는 <code>.otf</code> 파일을 직접 불러옵니다.<br />
 <code>SysFont()</code>와 달리, 경로를 지정해야 합니다.  </p>
 </blockquote>
 <hr />
 <h2 id="_5"><span class="title">텍스트 정렬</span></h2>
 <p>텍스트의 중앙 정렬, 우측 정렬 등을 위해 <code>get_rect()</code>를 사용합니다.  </p>
-<pre><code><span class="v">text</span> <span class="k">=</span> <span class="f">font</span><span class="pf">(</span><span class="n">40</span><span class="pf">)</span>.<span class="f">render</span><span class="pf">(</span><span class="s">"Center!"</span>, <span class="b">True</span>, <span class="s">"black"</span><span class="pf">)</span>
-<span class="v">rect</span> <span class="k">=</span> <span class="v">text</span>.<span class="f">get_rect</span><span class="pf">(</span><span class="v">center</span><span class="k">=</span><span class="pg">(</span><span class="n">WIDTH</span><span class="k">/</span><span class="n">2</span>, <span class="n">HEIGHT</span><span class="k">/</span><span class="n">2</span><span class="pg">)</span><span class="pf">)</span>
+<pre><code><span class="v">text</span> = <span class="f">font</span><span class="pf">(</span><span class="n">40</span><span class="pf">)</span>.<span class="f">render</span><span class="pf">(</span><span class="s">"Center!"</span>, <span class="b">True</span>, <span class="s">"black"</span><span class="pf">)</span>
+<span class="v">rect</span> = <span class="v">text</span>.<span class="f">get_rect</span><span class="pf">(</span><span class="v">center</span>=<span class="pg">(</span><span class="vb">WIDTH</span>/<span class="n">2</span>, <span class="vb">HEIGHT</span>/<span class="n">2</span><span class="pg">)</span><span class="pf">)</span>
 <span class="v">screen</span>.<span class="f">blit</span><span class="pf">(</span><span class="v">text</span>, <span class="v">rect</span><span class="pf">)</span></code></pre>
 
 <blockquote>
@@ -752,7 +752,7 @@
 <hr />
 <h2 id="_6"><span class="title">텍스트 배경색 추가</span></h2>
 <p><code>render()</code>의 네 번째 인자를 사용하면 배경색을 지정할 수 있습니다.  </p>
-<pre><code><span class="v">text</span> <span class="k">=</span> <span class="f">font</span><span class="pf">(</span><span class="n">40</span><span class="pf">)</span>.<span class="f">render</span><span class="pf">(</span><span class="s">"Hello"</span>, <span class="b">True</span>, <span class="s">"white"</span>, <span class="s">"darkblue"</span><span class="pf">)</span></code></pre>
+<pre><code><span class="v">text</span> = <span class="f">font</span><span class="pf">(</span><span class="n">40</span><span class="pf">)</span>.<span class="f">render</span><span class="pf">(</span><span class="s">"Hello"</span>, <span class="b">True</span>, <span class="s">"white"</span>, <span class="s">"darkblue"</span><span class="pf">)</span></code></pre>
 
 <blockquote>
 <p><code>render(텍스트, 안티앨리어싱, 글자색, 배경색)</code><br />
