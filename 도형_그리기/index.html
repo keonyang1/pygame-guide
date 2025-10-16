@@ -731,7 +731,7 @@
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">rect</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">[</span><span class="n">x</span>, <span class="n">y</span>, <span class="n">폭</span>, <span class="n">높이</span><span class="pg">]</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
 
 <p>(x, y)의 좌표를 기준으로 폭×높이만큼의 <strong>직사각형(Rectangle)</strong> 을 생성합니다.<br />
-‘두께’를 생략하면 내부가 채워집니다.  </p>
+<code>두께</code>를 생략하면 내부가 채워집니다.  </p>
 <p><strong>예시</strong></p>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">rect</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"red"</span>, <span class="pg">(</span><span class="n">100</span>, <span class="n">100</span>, <span class="n">200</span>, <span class="n">150</span><span class="pg">)</span><span class="pf">)</span></code></pre>
 
@@ -740,7 +740,7 @@
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">circle</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">(</span><span class="n">x</span>, <span class="n">y</span><span class="pg">)</span>, <span class="n">반지름</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
 
 <p>(x, y)를 중심으로 하는 <strong>원(Circle)</strong> 을 그립니다.<br />
-‘두께’를 생략하면 꽉 찬 원이 됩니다.  </p>
+<code>두께</code>를 생략하면 꽉 찬 원이 됩니다.  </p>
 <p><strong>예시</strong></p>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">circle</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"blue"</span>, <span class="pg">(</span><span class="n">300</span>, <span class="n">300</span><span class="pg">)</span>, <span class="n">80</span><span class="pf">)</span></code></pre>
 
@@ -766,7 +766,7 @@
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">lines</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="b">닫힘여부</span>, <span class="pg">[</span><span class="pg">(</span><span class="n">x1</span>, <span class="n">y1</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">x2</span>, <span class="n">y2</span><span class="pg">)</span>, ...<span class="pg">]</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
 
 <p>연속된 점들을 연결하여 <strong>다각형의 윤곽선</strong>을 그립니다.<br />
-'닫힘여부'에 <span class="b">True</span>를 주면 마지막 점과 첫 점이 자동으로 연결됩니다.  </p>
+<code>닫힘여부</code>에 <span class="b">True</span>를 주면 마지막 점과 첫 점이 자동으로 연결됩니다.  </p>
 <p><strong>예시</strong></p>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">lines</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"yellow"</span>, <span class="b">True</span>, <span class="pg">[</span><span class="pg">(</span><span class="n">100</span>, <span class="n">400</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">200</span>, <span class="n">500</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">300</span>, <span class="n">450</span><span class="pg">)</span><span class="pg">]</span>, <span class="n">3</span><span class="pf">)</span></code></pre>
 
@@ -784,7 +784,7 @@
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">polygon</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">[</span><span class="pg">(</span><span class="n">x1</span>, <span class="n">y1</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">x2</span>, <span class="n">y2</span><span class="pg">)</span>, ...<span class="pg">]</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
 
 <p>여러 점을 연결하여 <strong>다각형(Polygon)</strong> 을 만듭니다.<br />
-‘두께’를 생략하면 내부가 채워집니다.  </p>
+<code>두께</code>를 생략하면 내부가 채워집니다.  </p>
 <p><strong>예시</strong></p>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">polygon</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"orange"</span>, <span class="pg">[</span><span class="pg">(</span><span class="n">200</span>, <span class="n">200</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">250</span>, <span class="n">150</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">300</span>, <span class="n">200</span><span class="pg">)</span><span class="pg">]</span><span class="pf">)</span></code></pre>
 

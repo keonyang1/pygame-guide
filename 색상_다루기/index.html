@@ -434,7 +434,7 @@
           <li class="md-nav__item">
   <a href="#pygamedrawrectscreen-rgba" class="md-nav__link">
     <span class="md-ellipsis">
-      왜 그냥 'pygame.draw.rect(screen, (R,G,B,A), ...)'은 안 되는가?
+      왜 그냥 pygame.draw.rect(screen, (R,G,B,A), ...)은 안 되는가?
     </span>
   </a>
   
@@ -443,7 +443,7 @@
           <li class="md-nav__item">
   <a href="#1-surface-set_alpha" class="md-nav__link">
     <span class="md-ellipsis">
-      올바른 방법 1 — 전체 Surface 투명도: 'set_alpha()' 사용
+      올바른 방법 1 — 전체 Surface 투명도: set_alpha() 사용
     </span>
   </a>
   
@@ -689,7 +689,7 @@
           <li class="md-nav__item">
   <a href="#pygamedrawrectscreen-rgba" class="md-nav__link">
     <span class="md-ellipsis">
-      왜 그냥 'pygame.draw.rect(screen, (R,G,B,A), ...)'은 안 되는가?
+      왜 그냥 pygame.draw.rect(screen, (R,G,B,A), ...)은 안 되는가?
     </span>
   </a>
   
@@ -698,7 +698,7 @@
           <li class="md-nav__item">
   <a href="#1-surface-set_alpha" class="md-nav__link">
     <span class="md-ellipsis">
-      올바른 방법 1 — 전체 Surface 투명도: 'set_alpha()' 사용
+      올바른 방법 1 — 전체 Surface 투명도: set_alpha() 사용
     </span>
   </a>
   
@@ -775,7 +775,7 @@
 <pre><code><span class="v">screen</span>.<span class="f">fill</span><span class="pf">(</span><span class="s">"skyblue"</span><span class="pf">)</span></code></pre>
 
 <p>pygame은 <strong>일부 색상 이름 문자열</strong>도 지원합니다.<br />
-예를 들어 "red", "green", "blue", "white", "black" 등을 사용할 수 있습니다.  </p>
+예를 들어 <code>"red"</code>, <code>"green"</code>, <code>"blue"</code>, <code>"white"</code>, <code>"black"</code> 등을 사용할 수 있습니다.  </p>
 <blockquote>
 <p>⚠️ 단, 모든 이름이 지원되는 것은 아니므로 주로 RGB 방식을 권장합니다.</p>
 </blockquote>
@@ -795,15 +795,15 @@
 <pre><code><span class="v">color_with_alpha</span> = <span class="pf">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">128</span><span class="pf">)</span> <span class="c"># 빨강 + 반투명</span></code></pre>
 
 <p>RGBA에서 마지막 값인 <strong>Alpha(0~255)</strong> 는 투명도를 의미합니다.<br />
-'0'은 완전 투명, '255'는 완전 불투명입니다.  </p>
+<code>0</code>은 완전 투명, <code>255</code>는 완전 불투명입니다.  </p>
 <hr />
-<h3 id="pygamedrawrectscreen-rgba">왜 그냥 'pygame.draw.rect(screen, (R,G,B,A), ...)'은 안 되는가?</h3>
+<h3 id="pygamedrawrectscreen-rgba">왜 그냥 <code>pygame.draw.rect(screen, (R,G,B,A), ...)</code>은 안 되는가?</h3>
 <p>pygame.draw 계열 함수들은 <strong>대상 Surface에 직접 픽셀을 그리는 함수</strong>이며, 일반적으로 <strong>색상 튜플의 알파 채널을 무시</strong>합니다.<br />
 따라서 아래처럼 쓰면 알파가 적용되지 않고 불투명하게 그려집니다.  </p>
 <pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">rect</span><span class="pf">(</span><span class="v">screen</span>, <span class="pg">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">128</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">100</span>, <span class="n">100</span>, <span class="n">200</span>, <span class="n">150</span><span class="pg">)</span><span class="pf">)</span> <span class="c"># → 알파 무시됨</span></code></pre>
 
 <hr />
-<h3 id="1-surface-set_alpha">올바른 방법 1 — <strong>전체 Surface 투명도</strong>: 'set_alpha()' 사용</h3>
+<h3 id="1-surface-set_alpha">올바른 방법 1 — <strong>전체 Surface 투명도</strong>: <code>set_alpha()</code> 사용</h3>
 <p>Surface 전체의 투명도를 한 번에 조절하고 싶을 때 사용합니다. 간단하고 빠르지만, Surface 내의 픽셀별 알파는 불가능합니다.</p>
 <pre><code><span class="v">s</span> = <span class="l">pygame</span>.<span class="l">Surface</span><span class="pf">(</span><span class="pg">(</span><span class="n">200</span>, <span class="n">150</span><span class="pg">)</span><span class="pf">)</span>
 <span class="v">s</span>.<span class="f">set_alpha</span><span class="pf">(</span><span class="n">100</span><span class="pf">)</span> <span class="c"># 전체 투명도 설정 (0~255)</span>
@@ -814,16 +814,16 @@
 <ul>
 <li>사용법이 간단함.</li>
 <li>모든 픽셀이 동일한 알파를 갖게 됨.</li>
-<li>'set_alpha()'는 Surface 전체에 적용되므로, 픽셀별 투명도 제어가 필요하면 아래 방법을 사용하세요.</li>
+<li><code>set_alpha()</code>는 Surface 전체에 적용되므로, 픽셀별 투명도 제어가 필요하면 아래 방법을 사용하세요.</li>
 </ul>
 <hr />
 <h3 id="2-rgba-srcalpha-rgba">올바른 방법 2 — <strong>픽셀별 투명도(RGBA)</strong>: SRCALPHA + RGBA 사용</h3>
-<p>픽셀마다 다른 투명도를 적용하려면 'pygame.SRCALPHA' 옵션으로 Surface를 만들고, RGBA 값으로 채웁니다.  </p>
+<p>픽셀마다 다른 투명도를 적용하려면 <code>pygame.SRCALPHA</code> 옵션으로 Surface를 만들고, RGBA 값으로 채웁니다.  </p>
 <pre><code><span class="v">s</span> = <span class="l">pygame</span>.<span class="l">Surface</span><span class="pf">((</span><span class="n">200</span>, <span class="n">150</span><span class="pf">)</span>, <span class="l">pygame</span>.<span class="v">SRCALPHA</span><span class="pf">)</span>
 <span class="v">s</span>.<span class="f">fill</span><span class="pf">(</span><span class="pg">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">128</span><span class="pg">)</span><span class="pf">)</span> <span class="c"># 빨강 + 반투명(128)</span>
 <span class="v">screen</span>.<span class="f">blit</span><span class="pf">(</span><span class="v">s</span>, <span class="pg">(</span><span class="n">100</span>, <span class="n">100</span><span class="pg">)</span><span class="pf">)</span></code></pre>
 
-<p>또는 'pygame.draw'로 도형을 그리고 싶다면 대상이 되는 <strong>SRCALPHA Surface 위에</strong> 그리고 blit 합니다.  </p>
+<p>또는 <code>pygame.draw</code>로 도형을 그리고 싶다면 대상이 되는 <strong>SRCALPHA Surface 위에</strong> 그리고 blit 합니다.  </p>
 <pre><code><span class="v">s</span> = <span class="l">pygame</span>.<span class="l">Surface</span><span class="pf">((</span><span class="n">200</span>, <span class="n">150</span><span class="pf">)</span>, <span class="l">pygame</span>.<span class="v">SRCALPHA</span><span class="pf">)</span>
 <span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">rect</span><span class="pf">(</span><span class="v">s</span>, <span class="pg">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">150</span><span class="pg">),</span> <span class="pg">(</span><span class="n">0</span>, <span class="n">0</span>, <span class="n">200</span>, <span class="n">150</span><span class="pg">)</span><span class="pf">)</span>
 <span class="v">screen</span>.<span class="f">blit</span><span class="pf">(</span><span class="v">s</span>, <span class="pg">(</span><span class="n">100</span>, <span class="n">100</span><span class="pg">)</span><span class="pf">)</span></code></pre>
@@ -831,22 +831,22 @@
 <p><strong>특징</strong></p>
 <ul>
 <li>픽셀 단위의 알파(부분 투명도) 구현 가능.  </li>
-<li>'SRCALPHA' Surface는 'convert_alpha()'로 변환하면 성능이 향상될 수 있음.  </li>
+<li><code>SRCALPHA</code> Surface는 <code>convert_alpha()</code>로 변환하면 성능이 향상될 수 있음.  </li>
 </ul>
 <hr />
 <h3 id="_4">성능 및 주의사항</h3>
 <ul>
-<li>여러 개의 큰 'SRCALPHA' Surface를 매 프레임 새로 생성하고 그리는 작업은 느릴 수 있습니다. 가능하면 Surface를 재사용하세요.  </li>
-<li>'set_alpha()'는 간단하지만, 전체 투명도만 바뀌므로 픽셀별 차등 투명도가 필요하면 'SRCALPHA' 사용이 필수입니다.  </li>
-<li>'pygame.draw'로 메인 Surface에 직접 RGBA 색을 전달하면 알파가 무시되는 경우가 일반적이니, 항상 <strong>별도 Surface → blit</strong> 방식으로 처리하세요.</li>
+<li>여러 개의 큰 <code>SRCALPHA</code> Surface를 매 프레임 새로 생성하고 그리는 작업은 느릴 수 있습니다. 가능하면 Surface를 재사용하세요.  </li>
+<li><code>set_alpha()</code>는 간단하지만, 전체 투명도만 바뀌므로 픽셀별 차등 투명도가 필요하면 <code>SRCALPHA</code> 사용이 필수입니다.  </li>
+<li><code>pygame.draw</code>로 메인 Surface에 직접 RGBA 색을 전달하면 알파가 무시되는 경우가 일반적이니, 항상 <strong>별도 Surface → blit</strong> 방식으로 처리하세요.</li>
 <li>필요 시 <code>blit(..., special_flags=pygame.BLEND_RGBA_ADD)</code> 등 블렌딩 플래그로 합성 방식 제어 가능.</li>
 </ul>
 <hr />
 <h3 id="_5">요약</h3>
 <ul>
-<li>'RGBA' 튜플 자체는 색을 표현하지만, <strong>메인 Surface에 직접 그리면 알파가 적용되지 않음</strong>.</li>
-<li>픽셀별 알파를 쓰려면 'pygame.SRCALPHA' Surface를 만들고 RGBA로 채운 뒤 'blit()'하세요.</li>
-<li>전체 알파는 'set_alpha()'로 간단히 적용 가능.</li>
+<li><code>RGBA</code> 튜플 자체는 색을 표현하지만, <strong>메인 Surface에 직접 그리면 알파가 적용되지 않음</strong>.</li>
+<li>픽셀별 알파를 쓰려면 <code>pygame.SRCALPHA</code> Surface를 만들고 RGBA로 채운 뒤 <code>blit()</code>하세요.</li>
+<li>전체 알파는 <code>set_alpha()</code>로 간단히 적용 가능.</li>
 </ul>
 
 
