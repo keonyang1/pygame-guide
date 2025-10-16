@@ -50,6 +50,7 @@ code {
 .l  { color: #4EC9B0; } /* 라이브러리 or 클래스 */
 .f { color: #DCDCAA; } /* 함수 이름 */
 .v  { color: #9CDCFE; } /* 변수명 */
+.vb  { color: #43baff; } /* 변수명 */
 .n  { color: #B5CEA8; } /* 숫자 */
 .s  { color: #CE9178; } /* 문자열 */
 .b  { color: #288EC9; } /* 불리언 (True, False, None) */

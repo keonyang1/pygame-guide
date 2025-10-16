@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../%EC%83%89%EC%83%81_%EB%8B%A4%EB%A3%A8%EA%B8%B0/">
+        <link rel="prev" href="../%EC%A4%80%EB%B9%84_%EB%8B%A8%EA%B3%84/%EA%B8%B0%EB%B3%B8_%ED%8B%80_%EB%A7%8C%EB%93%A4%EA%B8%B0/">
       
       
-        <link rel="next" href="../%EC%98%88%EC%8B%9C_%EA%B2%8C%EC%9E%84/%EB%8B%A4%EB%A5%B8_%EC%83%89%EA%B9%94_%EC%B0%BE%EA%B8%B0/">
+        <link rel="next" href="../%EB%8F%84%ED%98%95_%EA%B7%B8%EB%A6%AC%EA%B8%B0/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>도형 그리기 - 파이게임 기초 가이드</title>
+        <title>색상 다루기 - 파이게임 기초 가이드</title>
       
     
     
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              도형 그리기
+              색상 다루기
             
           </span>
         </div>
@@ -342,28 +342,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../%EC%83%89%EC%83%81_%EB%8B%A4%EB%A3%A8%EA%B8%B0/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    색상 다루기
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -381,7 +359,7 @@
   
   
   <span class="md-ellipsis">
-    도형 그리기
+    색상 다루기
     
   </span>
   
@@ -394,7 +372,7 @@
   
   
   <span class="md-ellipsis">
-    도형 그리기
+    색상 다루기
     
   </span>
   
@@ -417,74 +395,89 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rect" class="md-nav__link">
+  <a href="#rgb" class="md-nav__link">
     <span class="md-ellipsis">
-      rect()
+      RGB 색상 지정
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#circle" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      circle()
+      미리 정의된 색상 이름 사용
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ellipse" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      ellipse()
+      색상 상수로 정의하기
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#line" class="md-nav__link">
+  <a href="#alpha" class="md-nav__link">
     <span class="md-ellipsis">
-      line()
+      투명도(Alpha) 값 사용
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="투명도(Alpha) 값 사용">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pygamedrawrectscreen-rgba" class="md-nav__link">
+    <span class="md-ellipsis">
+      왜 그냥 'pygame.draw.rect(screen, (R,G,B,A), ...)'은 안 되는가?
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#lines" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#1-surface-set_alpha" class="md-nav__link">
     <span class="md-ellipsis">
-      lines()
+      올바른 방법 1 — 전체 Surface 투명도: 'set_alpha()' 사용
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#aaline" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-rgba-srcalpha-rgba" class="md-nav__link">
     <span class="md-ellipsis">
-      aaline()
+      올바른 방법 2 — 픽셀별 투명도(RGBA): SRCALPHA + RGBA 사용
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#polygon" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      polygon()
+      성능 및 주의사항
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#arc" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      arc()
+      요약
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -492,6 +485,28 @@
   
 </nav>
       
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%EB%8F%84%ED%98%95_%EA%B7%B8%EB%A6%AC%EA%B8%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    도형 그리기
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -613,74 +628,89 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#rect" class="md-nav__link">
+  <a href="#rgb" class="md-nav__link">
     <span class="md-ellipsis">
-      rect()
+      RGB 색상 지정
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#circle" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      circle()
+      미리 정의된 색상 이름 사용
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ellipse" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      ellipse()
+      색상 상수로 정의하기
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#line" class="md-nav__link">
+  <a href="#alpha" class="md-nav__link">
     <span class="md-ellipsis">
-      line()
+      투명도(Alpha) 값 사용
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="투명도(Alpha) 값 사용">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pygamedrawrectscreen-rgba" class="md-nav__link">
+    <span class="md-ellipsis">
+      왜 그냥 'pygame.draw.rect(screen, (R,G,B,A), ...)'은 안 되는가?
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#lines" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#1-surface-set_alpha" class="md-nav__link">
     <span class="md-ellipsis">
-      lines()
+      올바른 방법 1 — 전체 Surface 투명도: 'set_alpha()' 사용
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#aaline" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#2-rgba-srcalpha-rgba" class="md-nav__link">
     <span class="md-ellipsis">
-      aaline()
+      올바른 방법 2 — 픽셀별 투명도(RGBA): SRCALPHA + RGBA 사용
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#polygon" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      polygon()
+      성능 및 주의사항
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#arc" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      arc()
+      요약
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -700,81 +730,102 @@
 
 
 
-<h1 id="_1"><strong>도형 그리기</strong></h1>
+<h1 id="_1"><strong>색상 다루기</strong></h1>
 <blockquote>
-<p><span class="caution">※ pygame이 설치되어 있다는 전제하에 설명합니다. ※</span></p>
+<p><span class="caution">※ RGB 색상은 0~255 범위의 정수로 지정합니다. ※</span></p>
 </blockquote>
 <hr />
-<h2 id="rect"><span class="title">rect()</span></h2>
-<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">rect</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">[</span><span class="n">x</span>, <span class="n">y</span>, <span class="n">폭</span>, <span class="n">높이</span><span class="pg">]</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
+<h2 id="rgb"><span class="title">RGB 색상 지정</span></h2>
+<pre><code><span class="v">color</span> <span class="k">=</span> <span class="pg">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span><span class="pg">)</span>  <span class="c"># 빨강 (Red)</span></code></pre>
 
-<p>(x, y)의 좌표를 기준으로 폭×높이만큼의 <strong>직사각형(Rectangle)</strong> 을 생성합니다.<br />
-‘두께’를 생략하면 내부가 채워집니다.  </p>
-<p><strong>예시</strong></p>
-<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">rect</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"red"</span>, <span class="pg">(</span><span class="n">100</span>, <span class="n">100</span>, <span class="n">200</span>, <span class="n">150</span><span class="pg">)</span><span class="pf">)</span></code></pre>
+<p>RGB는 <strong>Red, Green, Blue</strong>의 세 가지 값을 조합하여 색을 표현합니다.<br />
+각 값은 <strong>0~255</strong> 사이의 정수입니다.  </p>
+<p>예시:</p>
+<ul>
+<li><span style="color:#ff4d4d;">(255, 0, 0)</span> → 빨강</li>
+<li><span style="color:#4dff4d;">(0, 255, 0)</span> → 초록</li>
+<li><span style="color:#4d4dff;">(0, 0, 255)</span> → 파랑</li>
+<li>(255, 255, 255) → 흰색</li>
+<li>(0, 0, 0) → 검정</li>
+</ul>
+<hr />
+<h2 id="_2"><span class="title">미리 정의된 색상 이름 사용</span></h2>
+<pre><code><span class="v">screen</span>.<span class="f">fill</span><span class="pf">(</span><span class="s">"skyblue"</span><span class="pf">)</span></code></pre>
+
+<p>pygame은 <strong>일부 색상 이름 문자열</strong>도 지원합니다.<br />
+예를 들어 "red", "green", "blue", "white", "black" 등을 사용할 수 있습니다.  </p>
+<blockquote>
+<p>⚠️ 단, 모든 이름이 지원되는 것은 아니므로 주로 RGB 방식을 권장합니다.</p>
+</blockquote>
+<hr />
+<h2 id="_3"><span class="title">색상 상수로 정의하기</span></h2>
+<pre><code><span class="vb">WHITE</span> <span class="k">=</span> <span class="pf">(</span><span class="n">255</span>, <span class="n">255</span>, <span class="n">255</span><span class="pf">)</span>
+<span class="vb">BLACK</span> <span class="k">=</span> <span class="pf">(</span><span class="n">0</span>, <span class="n">0</span>, <span class="n">0</span><span class="pf">)</span>
+<span class="vb">RED</span> <span class="k">=</span> <span class="pf">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span><span class="pf">)</span>
+<span class="vb">BLUE</span> <span class="k">=</span> <span class="pf">(</span><span class="n">0</span>, <span class="n">0</span>, <span class="n">255</span><span class="pf">)</span></code></pre>
+
+<p>이처럼 미리 정의해두면 나중에 코드에서 보기 쉽고, 유지보수가 편해집니다.  </p>
+<p>예시:</p>
+<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">circle</span><span class="pf">(</span><span class="v">screen</span>, <span class="vb">RED</span>, <span class="pg">(</span><span class="n">200</span>, <span class="n">200</span><span class="pg">)</span>, <span class="n">50</span><span class="pf">)</span></code></pre>
 
 <hr />
-<h2 id="circle"><span class="title">circle()</span></h2>
-<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">circle</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">(</span><span class="n">x</span>, <span class="n">y</span><span class="pg">)</span>, <span class="n">반지름</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
+<h2 id="alpha"><span class="title">투명도(Alpha) 값 사용</span></h2>
+<pre><code><span class="v">color_with_alpha</span> <span class="k">=</span> <span class="pf">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">128</span><span class="pf">)</span> <span class="c"># 빨강 + 반투명</span></code></pre>
 
-<p>(x, y)를 중심으로 하는 <strong>원(Circle)</strong> 을 그립니다.<br />
-‘두께’를 생략하면 꽉 찬 원이 됩니다.  </p>
-<p><strong>예시</strong></p>
-<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">circle</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"blue"</span>, <span class="pg">(</span><span class="n">300</span>, <span class="n">300</span><span class="pg">)</span>, <span class="n">80</span><span class="pf">)</span></code></pre>
+<p>RGBA에서 마지막 값인 <strong>Alpha(0~255)</strong> 는 투명도를 의미합니다.<br />
+'0'은 완전 투명, '255'는 완전 불투명입니다.  </p>
+<hr />
+<h3 id="pygamedrawrectscreen-rgba">왜 그냥 'pygame.draw.rect(screen, (R,G,B,A), ...)'은 안 되는가?</h3>
+<p>pygame.draw 계열 함수들은 <strong>대상 Surface에 직접 픽셀을 그리는 함수</strong>이며, 일반적으로 <strong>색상 튜플의 알파 채널을 무시</strong>합니다.<br />
+따라서 아래처럼 쓰면 알파가 적용되지 않고 불투명하게 그려집니다.  </p>
+<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">rect</span><span class="pf">(</span><span class="v">screen</span>, <span class="pg">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">128</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">100</span>, <span class="n">100</span>, <span class="n">200</span>, <span class="n">150</span><span class="pg">)</span><span class="pf">)</span> <span class="c"># → 알파 무시됨</span></code></pre>
 
 <hr />
-<h2 id="ellipse"><span class="title">ellipse()</span></h2>
-<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">ellipse</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">[</span><span class="n">x</span>, <span class="n">y</span>, <span class="n">폭</span>, <span class="n">높이</span><span class="pg">]</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
+<h3 id="1-surface-set_alpha">올바른 방법 1 — <strong>전체 Surface 투명도</strong>: 'set_alpha()' 사용</h3>
+<p>Surface 전체의 투명도를 한 번에 조절하고 싶을 때 사용합니다. 간단하고 빠르지만, Surface 내의 픽셀별 알파는 불가능합니다.</p>
+<pre><code><span class="v">s</span> <span class="k">=</span> <span class="l">pygame</span>.<span class="l">Surface</span><span class="pf">(</span><span class="pg">(</span><span class="n">200</span>, <span class="n">150</span><span class="pg">)</span><span class="pf">)</span>
+<span class="v">s</span>.<span class="f">set_alpha</span><span class="pf">(</span><span class="n">100</span><span class="pf">)</span> <span class="c"># 전체 투명도 설정 (0~255)</span>
+<span class="v">s</span>.<span class="f">fill</span><span class="pf">(</span><span class="pg">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span><span class="pg">)</span><span class="pf">)</span> <span class="c"># 내부를 빨강으로 채움</span>
+<span class="v">screen</span>.<span class="f">blit</span><span class="pf">(</span><span class="v">s</span>, <span class="pg">(</span><span class="n">100</span>, <span class="n">100</span><span class="pg">)</span><span class="pf">)</span></code></pre>
 
-<p>지정된 사각형 안에 <strong>타원(Ellipse)</strong> 을 그립니다.<br />
-폭과 높이에 따라 원형 또는 납작한 타원이 됩니다.  </p>
-<p><strong>예시</strong></p>
-<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">ellipse</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"green"</span>, <span class="pg">(</span><span class="n">150</span>, <span class="n">250</span>, <span class="n">300</span>, <span class="n">150</span><span class="pg">)</span><span class="pf">)</span></code></pre>
-
+<p><strong>특징</strong></p>
+<ul>
+<li>사용법이 간단함.</li>
+<li>모든 픽셀이 동일한 알파를 갖게 됨.</li>
+<li>'set_alpha()'는 Surface 전체에 적용되므로, 픽셀별 투명도 제어가 필요하면 아래 방법을 사용하세요.</li>
+</ul>
 <hr />
-<h2 id="line"><span class="title">line()</span></h2>
-<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">line</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">(</span><span class="n">시작점 x</span>, <span class="n">y</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">끝점 x</span>, <span class="n">y</span><span class="pg">)</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
+<h3 id="2-rgba-srcalpha-rgba">올바른 방법 2 — <strong>픽셀별 투명도(RGBA)</strong>: SRCALPHA + RGBA 사용</h3>
+<p>픽셀마다 다른 투명도를 적용하려면 'pygame.SRCALPHA' 옵션으로 Surface를 만들고, RGBA 값으로 채웁니다.  </p>
+<pre><code><span class="v">s</span> <span class="k">=</span> <span class="l">pygame</span>.<span class="l">Surface</span><span class="pf">((</span><span class="n">200</span>, <span class="n">150</span><span class="pf">)</span>, <span class="l">pygame</span>.<span class="v">SRCALPHA</span><span class="pf">)</span>
+<span class="v">s</span>.<span class="f">fill</span><span class="pf">(</span><span class="pg">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">128</span><span class="pg">)</span><span class="pf">)</span> <span class="c"># 빨강 + 반투명(128)</span>
+<span class="v">screen</span>.<span class="f">blit</span><span class="pf">(</span><span class="v">s</span>, <span class="pg">(</span><span class="n">100</span>, <span class="n">100</span><span class="pg">)</span><span class="pf">)</span></code></pre>
 
-<p>두 점을 연결하는 <strong>선(Line)</strong> 을 그립니다.  </p>
-<p><strong>예시</strong></p>
-<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">line</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"white"</span>, <span class="pg">(</span><span class="n">50</span>, <span class="n">50</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">300</span>, <span class="n">200</span><span class="pg">)</span>, <span class="n">5</span><span class="pf">)</span></code></pre>
+<p>또는 'pygame.draw'로 도형을 그리고 싶다면 대상이 되는 <strong>SRCALPHA Surface 위에</strong> 그리고 blit 합니다.  </p>
+<pre><code><span class="v">s</span> <span class="k">=</span> <span class="l">pygame</span>.<span class="l">Surface</span><span class="pf">((</span><span class="n">200</span>, <span class="n">150</span><span class="pf">)</span>, <span class="l">pygame</span>.<span class="v">SRCALPHA</span><span class="pf">)</span>
+<span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">rect</span><span class="pf">(</span><span class="v">s</span>, <span class="pg">(</span><span class="n">255</span>, <span class="n">0</span>, <span class="n">0</span>, <span class="n">150</span><span class="pg">),</span> <span class="pg">(</span><span class="n">0</span>, <span class="n">0</span>, <span class="n">200</span>, <span class="n">150</span><span class="pg">)</span><span class="pf">)</span>
+<span class="v">screen</span>.<span class="f">blit</span><span class="pf">(</span><span class="v">s</span>, <span class="pg">(</span><span class="n">100</span>, <span class="n">100</span><span class="pg">)</span><span class="pf">)</span></code></pre>
 
+<p><strong>특징</strong></p>
+<ul>
+<li>픽셀 단위의 알파(부분 투명도) 구현 가능.  </li>
+<li>'SRCALPHA' Surface는 'convert_alpha()'로 변환하면 성능이 향상될 수 있음.  </li>
+</ul>
 <hr />
-<h2 id="lines"><span class="title">lines()</span></h2>
-<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">lines</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="b">닫힘여부</span>, <span class="pg">[</span><span class="pg">(</span><span class="n">x1</span>, <span class="n">y1</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">x2</span>, <span class="n">y2</span><span class="pg">)</span>, ...<span class="pg">]</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
-
-<p>연속된 점들을 연결하여 <strong>다각형의 윤곽선</strong>을 그립니다.<br />
-'닫힘여부'에 <span class="b">True</span>를 주면 마지막 점과 첫 점이 자동으로 연결됩니다.  </p>
-<p><strong>예시</strong></p>
-<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">lines</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"yellow"</span>, <span class="b">True</span>, <span class="pg">[</span><span class="pg">(</span><span class="n">100</span>, <span class="n">400</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">200</span>, <span class="n">500</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">300</span>, <span class="n">450</span><span class="pg">)</span><span class="pg">]</span>, <span class="n">3</span><span class="pf">)</span></code></pre>
-
+<h3 id="_4">성능 및 주의사항</h3>
+<ul>
+<li>여러 개의 큰 'SRCALPHA' Surface를 매 프레임 새로 생성하고 그리는 작업은 느릴 수 있습니다. 가능하면 Surface를 재사용하세요.  </li>
+<li>'set_alpha()'는 간단하지만, 전체 투명도만 바뀌므로 픽셀별 차등 투명도가 필요하면 'SRCALPHA' 사용이 필수입니다.  </li>
+<li>'pygame.draw'로 메인 Surface에 직접 RGBA 색을 전달하면 알파가 무시되는 경우가 일반적이니, 항상 <strong>별도 Surface → blit</strong> 방식으로 처리하세요.</li>
+<li>필요 시 <code>blit(..., special_flags=pygame.BLEND_RGBA_ADD)</code> 등 블렌딩 플래그로 합성 방식 제어 가능.</li>
+</ul>
 <hr />
-<h2 id="aaline"><span class="title">aaline()</span></h2>
-<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">aaline</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">(</span><span class="n">시작점 x</span>, <span class="n">y</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">끝점 x</span>, <span class="n">y</span><span class="pg">)</span><span class="pf">)</span></code></pre>
-
-<p><strong>부드러운(안티에일리어싱)</strong> 선을 그립니다.<br />
-픽셀 계단 현상이 줄어들어 매끄럽게 보입니다.  </p>
-<p><strong>예시</strong></p>
-<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">aaline</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"white"</span>, <span class="pg">(</span><span class="n">100</span>, <span class="n">100</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">400</span>, <span class="n">200</span><span class="pg">)</span><span class="pf">)</span></code></pre>
-
-<hr />
-<h2 id="polygon"><span class="title">polygon()</span></h2>
-<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">polygon</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">[</span><span class="pg">(</span><span class="n">x1</span>, <span class="n">y1</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">x2</span>, <span class="n">y2</span><span class="pg">)</span>, ...<span class="pg">]</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
-
-<p>여러 점을 연결하여 <strong>다각형(Polygon)</strong> 을 만듭니다.<br />
-‘두께’를 생략하면 내부가 채워집니다.  </p>
-<p><strong>예시</strong></p>
-<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">polygon</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"orange"</span>, <span class="pg">[</span><span class="pg">(</span><span class="n">200</span>, <span class="n">200</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">250</span>, <span class="n">150</span><span class="pg">)</span>, <span class="pg">(</span><span class="n">300</span>, <span class="n">200</span><span class="pg">)</span><span class="pg">]</span><span class="pf">)</span></code></pre>
-
-<hr />
-<h2 id="arc"><span class="title">arc()</span></h2>
-<pre><code><span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">arc</span><span class="pf">(</span><span class="v">화면 변수명</span>, <span class="s">색상</span>, <span class="pg">[</span><span class="n">x</span>, <span class="n">y</span>, <span class="n">폭</span>, <span class="n">높이</span><span class="pg">]</span>, <span class="n">시작각도</span>, <span class="n">끝각도</span>, <span class="n">두께</span><span class="pf">)</span></code></pre>
-
-<p>지정된 사각형 영역 안에 <strong>호(Arc, 원의 일부분)</strong> 를 그립니다.<br />
-각도는 라디안 단위이며, 시계방향으로 증가합니다.  </p>
-<p><strong>예시</strong></p>
-<pre><code><span class="k">import</span> <span class="l">math</span>
-<span class="l">pygame</span>.<span class="l">draw</span>.<span class="f">arc</span><span class="pf">(</span><span class="v">screen</span>, <span class="s">"purple"</span>, <span class="pg">(</span><span class="n">150</span>, <span class="n">100</span>, <span class="n">200</span>, <span class="n">200</span><span class="pg">)</span>, <span class="l">math</span>.<span class="v">pi</span> <span class="k">/</span> <span class="n">2</span>, <span class="l">math</span>.<span class="v">pi</span>, <span class="n">4</span><span class="pf">)</span></code></pre>
+<h3 id="_5">요약</h3>
+<ul>
+<li>'RGBA' 튜플 자체는 색을 표현하지만, <strong>메인 Surface에 직접 그리면 알파가 적용되지 않음</strong>.</li>
+<li>픽셀별 알파를 쓰려면 'pygame.SRCALPHA' Surface를 만들고 RGBA로 채운 뒤 'blit()'하세요.</li>
+<li>전체 알파는 'set_alpha()'로 간단히 적용 가능.</li>
+</ul>
 
 
 
